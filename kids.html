@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Ministry | Mwangaza Bible Baptist Church</title>
+   <link rel="icon" type="image/png" href="images/mwangaza-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mwangaza Kids Ministry</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="about.html">About</a>
+      <a href="choir.html">Choir</a>
+      <a href="kids.html">Kids</a>
+    </nav>
+  </header>
+
+  <section class="kids-intro">
+    <h2>Welcome to Mwangaza Kids Ministry</h2>
+    <p>We believe children are a gift from God and a vital part of our church family. Our Kids Ministry helps children grow in faith through Bible lessons, worship, crafts, and family devotionals.</p>
+  </section>
+  <div class="print area"></div>
+  <section class="sunday-school-form">
+    <h2>📋 Sunday School Registration</h2>
+    <p>Register your child for our upcoming Sunday School sessions. We’re excited to help them grow in faith, friendship, and fun!</p>
+
+  
+<!-- modify this form HTML and place wherever you want your form -->
+  <form
+    action="https://formspree.io/f/xdklyyyn"
+    method="POST"
+  >
+    <label for="child-name">Child’s Full Name:</label><br>
+        <input type="text" id="child-name" name="child-name" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="grade">School Grade:</label><br>
+        <input type="text" id="grade" name="grade"><br><br>
+
+        <label for="parent-name">Parent/Guardian Name:</label><br>
+        <input type="text" id="parent-name" name="parent-name" required><br><br>
+
+        <label for="contact">Phone Number:</label><br>
+        <input type="tel" id="contact" name="contact" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="notes">Any Allergies or Special Needs:</label><br>
+        <textarea id="notes" name="notes" rows="4"></textarea><br><br>
+
+        <button type="submit">Register</button>
+
+        <button onclick="window.print()">Print Registration Form</button>
+  </form>
+  </div> 
+    
+  </section>
+
+  <section class="kids-resources">
+    <h2>📚 Weekly Bible Lessons & Activities</h2>
+    <p>Download coloring pages, memory verse challenges, and object lessons to enjoy at home or during Sunday School.</p>
+    <ul>
+      <li><a href="#">Coloring Page: Noah’s Ark</a></li>
+      <li><a href="#">Memory Verse Challenge: John 3:16</a></li>
+      <li><a href="#">Craft: Fruit of the Spirit Tree</a></li>
+    </ul>
+  </section>
+
+  <section class="parent-support">
+    <h2>👨‍👩‍👧 Partnering with Parents</h2>
+    <p>We’re here to support parents as the primary spiritual leaders of their children. These videos offer practical ways to build faith at home:</p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=ekmFCzUr5tg">3 Things You Can Do To Partner With Parents Today!</a> – Simple steps to strengthen the church-parent connection.</li>
+      <li><a href="https://www.youtube.com/watch?v=yDdYlN8L1y8">4 Ways to Include Parents in Your Family Ministry | Brian ...</a> – Creative ways to engage families in ministry.</li>
+      <li><a href="https://www.youtube.com/watch?v=yvSV-30Dfwo">Connecting Parents to Your Children's Ministry — Caroline ...</a> – Tips for building trust and communication with parents.</li>
+    </ul>
+  </section>
+
+  <section class="curriculum">
+    <h2>📖 Curriculum & Devotionals</h2>
+    <p>Explore top curriculum options and devotionals to guide your child’s spiritual journey:</p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=TDvgocG4uTU">Kids Ministry Curriculum Guide 2023</a> – Reviews Wonder Ink, Brite, Cross-Formed Kids, and more.</li>
+      <li><a href="https://www.youtube.com/watch?v=xkxUwQObTvk">HOW TO KID'S MINISTRY: Importance of Family Devotionals ...</a> – Learn how to apply Scripture in everyday life.</li>
+    </ul>
+  </section>
+
+  <section class="volunteer">
+    <h2>🙋 Volunteer & Team Support</h2>
+    <p>Want to serve in Kids Ministry? These videos will help you build a strong, caring team:</p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=CP5-15aUFLA">HOW TO Serve Your Kids Ministry Team: 3 Things Every ...</a> – Leadership tips for supporting your volunteers.</li>
+      <li><a href="https://www.youtube.com/watch?v=Yb7_4f-hiCo&pp=0gcJCRsBo7VqN5tD">How to Start a Children's Ministry</a> – A full guide to launching and growing your ministry.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Mwangaza Bible Baptist Church | Tudor, Mombasa</p>
+  </footer>
+</body>
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent actual submission for now
+    const confirmed = confirm("Thank you for registering! Do you want to submit this form?");
+    if (confirmed) {
+      alert("Form submitted successfully!");
+      form.submit(); // Proceed with submission
+    }
+  });
+</script>
+</html>

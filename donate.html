@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Mwangaza Bible Baptist Church</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Support Our Ministry</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="choir.html">Choir</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="donation">
+    <h2>Give with a Grateful Heart</h2>
+    <p>Your generosity helps us spread the Gospel, serve our community, and grow in faith together.</p>
+
+    <section class="giving-devotional">
+      <h2>Why We Give</h2>
+      <blockquote>
+        <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."</p>
+        <footer>— 2 Corinthians 9:7</footer>
+      </blockquote>
+      <p>Giving is an act of worship. It reflects our trust in God’s provision and our desire to be part of His mission. Your generosity helps us shine the light of Christ in Mombasa and beyond.</p>
+    </section>
+
+    <form>
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="amount">Donation Amount (KES):</label><br>
+      <input type="number" id="amount" name="amount" required><br><br>
+
+      <label for="method">Payment Method:</label><br>
+      <select id="method" name="method" required>
+        <option value="">--Select--</option>
+        <option value="mpesa">M-Pesa</option>
+        <option value="paypal">PayPal</option>
+        <option value="bank">Bank Transfer</option>
+      </select><br><br>
+
+      <button type="submit">Give Now</button>
+    </form>
+
+    <div class="giving-info">
+      <h3>Giving Details</h3>
+      <p><strong>M-Pesa Paybill:</strong> 123456</p>
+      <p><strong>Bank Account:</strong> Mwangaza Baptist Church, Equity Bank, A/C 987654321</p>
+      <p><strong>PayPal:</strong> mwangazabaptist@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mwangaza Bible Baptist Church | Tudor, Mombasa</p>
+  </footer>
+</body>
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you for your generous gift! May God bless you abundantly.");
+    form.reset();
+  });
+</script>
+</html>

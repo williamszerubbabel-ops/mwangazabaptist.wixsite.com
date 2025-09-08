@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MWANGAZA Bible Baptist Church</title>
+  <link rel="icon" type="image/png" href="images/mwangaza-logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mwangaza Bible Baptist Church</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+  <img src="images/mwangaza-logo.png" alt="Mwangaza Bible Baptist Church Logo" style="height:65px;">
+    <h1>MWANGAZA BIBLE BAPTIST CHURCH</h1>
+    <p>A Light in Uasin gishu</p>
+    <nav>
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+      <a href="choir.html">Choir</a>
+      <a href="youth.html">Youth</a>
+      <a href="kids.html">Kids</a>
+     
+    </nav>
+  </header>
+
+  <section class="verse-of-the-day">
+    <h2>📖 Verse of the Day</h2>
+    <p id="verse-text"></p>
+    <p id="verse-ref"></p>
+    <button onclick="shareVerse()">Share This Verse</button>
+  </section>
+
+  <section class="welcome">
+    <h2>Welcome to Our Church</h2>
+    <p>We are a Bible-believing church committed to sharing the Gospel and serving our community in Uasin Ngishu.</p>
+  </section>
+
+  <section class="services">
+    <h2>Sunday Program</h2>
+    <ul>
+      <li>Morning prayers – 7:00-9.00 AM</li>
+      <li>Sunday school – 9:00-10.00 AM</li>
+      <li>Main service – 10:00-11:30 AM</li>
+      <li>Men's,ladies' and youth's service – 11:30-12:30 PM</li>
+      <li>Evening fellowsips– 3:00-4:00 PM</li>
+      <li>Choir practice – Saturday 3:00-4:00 AM</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Mwangaza Bible Baptist Church | Moi's Bridge, Uasin gishu</p>
+  </footer>
+</body>
+<script>
+  const verses = [
+    {
+      text: "The Lord is my light and my salvation—whom shall I fear?",
+      ref: "Psalm 27:1"
+    },
+    {
+      text: "Trust in the Lord with all your heart and lean not on your own understanding.",
+      ref: "Proverbs 3:5"
+    },
+    {
+      text: "I can do all things through Christ who strengthens me.",
+      ref: "Philippians 4:13"
+    },
+    {
+      text: "Be still, and know that I am God.",
+      ref: "Psalm 46:10"
+    },
+    {
+      text: "For we walk by faith, not by sight.",
+      ref: "2 Corinthians 5:7"
+    }
+  ];
+
+  // Pick a random verse
+  const todayVerse = verses[Math.floor(Math.random() * verses.length)];
+  document.getElementById("verse-text").textContent = `"${todayVerse.text}"`;
+  document.getElementById("verse-ref").textContent = `— ${todayVerse.ref}`;
+
+  // Share button functionality
+  function shareVerse() {
+    const shareText = `"${todayVerse.text}" — ${todayVerse.ref} #VerseOfTheDay`;
+    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+    window.open(shareUrl, "_blank");
+  }
+</script>
+</html>
